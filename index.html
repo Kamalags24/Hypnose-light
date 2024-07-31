@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/CSS/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Visual game</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Welcome</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dashboard</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <!-- <div id="controls"> -->
+                <button id="playPause">Play/Pause</button>
+                <div class="slider-container">
+                    <label for="tempoSlider">Tempo:</label>
+                    <input type="range" id="tempoSlider" min="60" max="200" value="120">
+                    <span id="tempoValue">120</span>
+                </div>
+                <div class="slider-container">
+                    <label for="particleSlider">Particles:</label>
+                    <input type="range" id="particleSlider" min="0" max="2000" value="750">
+                    <span id="particleValue">750</span>
+                </div>
+                <div class="slider-container">
+                    <label for="reverbSlider">Reverb:</label>
+                    <input type="range" id="reverbSlider" min="0" max="0.3" step="0.01" value="0.1">
+                    <span id="reverbValue">0.1</span>
+                </div>
+                <div class="slider-container">
+                    <label for="scaleSelect">Scale:</label>
+                    <select id="scaleSelect">
+                        <option value="major" selected>Major</option>
+                        <option value="minor">Minor</option>
+                        <option value="pentatonic">Pentatonic</option>
+                        <option value="blues">Blues</option>
+                        <option value="chromatic">Chromatic</option>
+                    </select>
+                </div>
+                <button id="toggleGlow">Toggle Glow</button>
+                <button id="toggleHarmonics">Toggle Harmonics</button>
+                <button id="toggleBeat">Enable Beat</button>
+            <!-- </div> -->
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <div id="canvas-container">
+        <span>Kamal</span>
+        <canvas id="polyrhythmCanvas"></canvas>
+    </div>
+    
+    <div id="info">
+        <p>Scale: <span id="currentScale">Major</span> | Rings: 22 (3 Octaves) | BPM: <span id="bpm">120</span> | Reverb: Low</p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="Assets/JS/script.js"></script>
+</body>
+
+</html>
